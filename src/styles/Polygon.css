@@ -1,0 +1,53 @@
+.filters {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  display: flex;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.tooltip {
+  position: fixed;
+  background: white;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  pointer-events: none;
+  z-index: 1000;
+  display: none;
+}
+
+polygon {
+  cursor: pointer;
+  transition: opacity 0.3s;
+  pointer-events: auto;
+  fill-opacity: 0.6;
+}
+
+polygon:hover {
+  fill-opacity: 0.8;
+}
+
+polygon[data-status="available"] {
+  fill: #4CAF50;
+}
+
+polygon[data-status="reserved"] {
+  fill: #FFC107;
+}
+
+polygon[data-status="sold"] {
+  fill: #F44336;
+}
+
+select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: white;
+}
